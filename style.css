@@ -99,14 +99,16 @@ main {
   width: 48px;
   height: 48px;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  flex-shrink: 0;
+
+  border: 1px solid var(--border);
   border-radius: 50%;
 
   background: rgba(47, 140, 255, 0.06);
-
-  border: 1px solid var(--border);
 
   overflow: hidden;
 
@@ -116,17 +118,20 @@ main {
 }
 
 .logo img {
+  display: block;
+
   width: 78%;
   height: 78%;
+
+  max-width: 100%;
+  max-height: 100%;
 
   object-fit: contain;
 }
 
 .logo:hover {
   transform: translateY(-2px);
-
-  border-color:
-    rgba(105, 183, 255, 0.55);
+  border-color: rgba(105, 183, 255, 0.55);
 }
 
 nav {
